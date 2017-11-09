@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Temis tag System</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.0/axios.min.js"></script>
+</head>
+
+<body class="container">
+    <h1>Temis Tag System</h1>
+    <div id="app">
+        <ol>
+            <li v-for="law in laws">
+                <p>{{ law.text }}</p>
+                <button v-on:click="reverseMessage(law._id, 'NOMEACAO')">NOMEACAO</button>
+                <button v-on:click="reverseMessage(law._id, 'UTILIDADE_PUBLICA')">UTILIDADE_PUBLICA</button>
+                <button v-on:click="reverseMessage(law._id, 'SAUDE')">SAUDE</button>
+                <button v-on:click="reverseMessage(law._id, 'ACESSIBILIDADE')">ACESSIBILIDADE</button>
+                <button v-on:click="reverseMessage(law._id, 'CAUSAS_ANIMAIS')">CAUSAS_ANIMAIS</button>
+                <button v-on:click="reverseMessage(law._id, 'DATA_COMEMORATIVA')">DATA_COMEMORATIVA</button>
+                <button v-on:click="reverseMessage(law._id, 'REGISTRO_CANCELADO')">REGISTRO_CANCELADO</button>
+                <button v-on:click="reverseMessage(law._id, 'OUTRO')">OUTRO</button>
+            </li>
+        </ol>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
